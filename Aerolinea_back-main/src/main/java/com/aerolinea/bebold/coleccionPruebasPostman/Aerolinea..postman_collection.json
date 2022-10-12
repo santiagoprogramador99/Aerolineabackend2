@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "48b1c934-215c-471f-a972-d14c2c5165ca",
+		"name": "Aerolinea.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/Api/Ruta/Origenes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Ruta/Origenes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Ruta",
+						"Origenes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Ruta/Destinos/Bogota",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Ruta/Destinos/Bogota",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Ruta",
+						"Destinos",
+						"Bogota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Pasajero/Buscar/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Pasajero/Buscar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Pasajero",
+						"Buscar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Pasajero/Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPasajero\": 3,\r\n    \"nombre\": \"susana\",\r\n    \"apellido\": \"sierra\",\r\n    \"telefono\": \"4322\",\r\n    \"correo\": \"susan@gmail.com\",\r\n    \"edad\": 21,\r\n    \"fechaVisa\": null,\r\n    \"cantidadViajes\": 4,\r\n    \"millasViajadas\": 300,\r\n    \"tipoViajero\": \"Adulto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Api/Pasajero/Crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Pasajero",
+						"Crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Pasajero/Viaje?idPasajero=2&millas=25",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Pasajero/Viaje?idPasajero=1&millas=25",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Pasajero",
+						"Viaje"
+					],
+					"query": [
+						{
+							"key": "idPasajero",
+							"value": "1"
+						},
+						{
+							"key": "millas",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Reserva/Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Reserva/Listar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Reserva",
+						"Listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Reserva/Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idReserva\": 3,\r\n        \"estado\": \"Realizada\",\r\n        \"tipoVuelo\": \"OW\",\r\n        \"vueloIda\": {\r\n            \"idVuelo\": 2,\r\n            \"fecha\": \"2022-02-02T00:00:00.000+00:00\",\r\n            \"numero\": \"4321\",\r\n            \"hora\": \"10:00\",\r\n            \"sillasDisponibles\": 220,\r\n            \"precio\": 189000.0,\r\n            \"ruta\": {\r\n                \"idRuta\": 2,\r\n                \"duracion\": \"20\",\r\n                \"millas\": 13.0,\r\n                \"ciudadOrigen\": {\r\n                    \"idCiudad\": 2,\r\n                    \"nombre\": \"Cali\"\r\n                },\r\n                \"ciudadDestino\": {\r\n                    \"idCiudad\": 1,\r\n                    \"nombre\": \"Bogota\"\r\n                }\r\n            }\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Api/Reserva/Crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Reserva",
+						"Crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Tiquete/Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idTiquete\": 5,\r\n    \"totalPagar\":269000,\r\n    \"pasajero\": {\r\n    \"idPasajero\": 2,\r\n    \"nombre\": \"julian\",\r\n    \"apellido\": \"jojoa\",\r\n    \"telefono\": \"4532\",\r\n    \"correo\": \"jojoa@gmail.com\",\r\n    \"edad\": 22,\r\n    \"fechaVisa\": null,\r\n    \"cantidadViajes\": 4,\r\n    \"millasViajadas\": 125,\r\n    \"tipoViajero\": \"Adulto\"\r\n},\r\n    \"reserva\":{\r\n        \"idReserva\": 3,\r\n        \"estado\":\"Realizada\",\r\n        \"tipoVuelo\":\"OW\",\r\n        \"vueloIda\":{\r\n            \"idVuelo\":2,\r\n            \"isEscala\":0,\r\n            \"hora\":\"10:00\",\r\n            \"numero\": \"4321\",\r\n            \"precio\":189000,\r\n            \"sillasDisponibles\":220,\r\n            \"ruta\":{\r\n                \"idRuta\":2,\r\n                \"duracion\":\"20\",\r\n                \"millas\":13,\r\n                \"ciudadOrigen\":{\r\n                    \"idCiudad\":2,\r\n                    \"isNacional\":1,\r\n                    \"nombre\":\"Cali\",\r\n                    \"isVisa\":0\r\n                },\r\n                \"ciudadDestino\":{\r\n                    \"idCiudad\":1,\r\n                    \"isNacional\":1,\r\n                    \"nombre\":\"Bogota\",\r\n                    \"isVisa\":0\r\n                }\r\n            }\r\n\r\n\r\n\r\n        }\r\n\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Api/Tiquete/Crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Tiquete",
+						"Crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Vuelo/Buscar/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Vuelo/Buscar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Vuelo",
+						"Buscar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Vuelo/Lista/?fecha=2022-02-01&origen=Bogota&destino=Cali&cantidad=3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Vuelo/Lista/?fecha=2022-02-01&origen=Bogota&destino=Cali&cantidad=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Vuelo",
+						"Lista",
+						""
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2022-02-01"
+						},
+						{
+							"key": "origen",
+							"value": "Bogota"
+						},
+						{
+							"key": "destino",
+							"value": "Cali"
+						},
+						{
+							"key": "cantidad",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Tiquete/Descuentos?fechaInicio=2022-01-01&fechaFin=2022-12-31&idPasajero=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Tiquete/Descuentos?fechaInicio=2022-01-01&fechaFin=2022-12-31&idPasajero=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Tiquete",
+						"Descuentos"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2022-01-01"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2022-12-31"
+						},
+						{
+							"key": "idPasajero",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Reserva/ListarD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Reserva/ListarD",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Reserva",
+						"ListarD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Ciudad/Visa/Rio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Ciudad/Visa/Rio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Ciudad",
+						"Visa",
+						"Rio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Api/Ciudad/Visa/Rio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Api/Ciudad/Visa/Rio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Api",
+						"Ciudad",
+						"Visa",
+						"Rio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
